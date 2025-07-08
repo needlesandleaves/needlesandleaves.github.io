@@ -4,7 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is a static website for "Needles + Leaves," a succulent blog and online shop hosted on GitHub Pages. The site was originally built on Squarespace and has been exported as static HTML files. The domain `needlesandleaves.net` is configured via the CNAME file.
+This is a static archive of "Needles + Leaves," a succulent blog that was originally built on Squarespace. The site has been exported as static HTML files and cleaned up to remove unnecessary Squarespace functionality for use as a static archive hosted on GitHub Pages. The domain `needlesandleaves.net` is configured via the CNAME file.
+
+### Archive Status
+This is a **cleaned static archive** - all dynamic Squarespace features have been intentionally removed to create a lightweight, functional static website that preserves the original content and styling without server dependencies.
 
 ## Site Architecture
 
@@ -31,10 +34,23 @@ This is a static website for "Needles + Leaves," a succulent blog and online sho
 - **Domain**: needlesandleaves.net (configured via CNAME)
 - **Deployment**: Automatic via GitHub Pages on push to main branch
 
-### Asset Management
-- CSS files are minified Squarespace assets
-- JavaScript includes Squarespace platform code, analytics, and social features
-- Images are referenced from Squarespace CDN and local assets
+### Asset Management - CLEANED
+- **CSS files**: Preserved essential styling and layout files (175 remaining)
+- **JavaScript files**: Reduced to essential layout and font loading only (106 remaining, down from 400+)
+- **Images**: All original content images preserved (694 files)
+- **Removed**: All commerce, analytics, social media, comments, and dynamic functionality
+
+### Files Removed During Cleanup (400+ files)
+The following unnecessary Squarespace features were removed:
+- Analytics and tracking scripts (`analytics.js`)
+- E-commerce functionality (`commerce-*.js`, `commerce-*.css`)
+- ReCAPTCHA and security features (`recaptcha__en.js`)
+- Enterprise features (`enterprise.js`)
+- Comments system (`comments-*.js`, `comments-*.css`)
+- Social media integration (`social-buttons-*`, `simple-liking-*`)
+- Performance monitoring (`performance-*.js`)
+- Dynamic JavaScript libraries (`common-*.js`, `extract-css-*`)
+- Duplicate and temporary files
 
 ### No Build Process
 This is a static site with no build system, package.json, or development dependencies. All files are served directly as-is.
@@ -53,8 +69,10 @@ This is a static site with no build system, package.json, or development depende
 
 ### Asset Handling
 - Images should be optimized for web use
-- CSS and JS files are primarily Squarespace-generated
+- **CSS files**: Essential styling preserved, safe to modify for layout tweaks
+- **JavaScript files**: Only essential layout and TypeKit font loading remain
 - Local assets should be placed in appropriate `_files/` directories
+- **Do not add back**: Commerce, analytics, social, or dynamic Squarespace features
 
 ## Common Tasks
 
@@ -73,10 +91,43 @@ This is a static site with no build system, package.json, or development depende
 - Domain configuration is handled via the CNAME file
 - DNS settings are managed externally
 
+## Archive Cleanup History
+
+### What Was Cleaned (2024)
+This archive underwent extensive cleanup to remove unnecessary Squarespace functionality:
+
+**Total files removed**: 400+ files
+**HTML files cleaned**: 47 files (removed script references to deleted assets)
+**File count**: Reduced from 3,000+ to 2,544 files
+**Focus**: Preserved all content, styling, and images while removing server-dependent features
+
+### Remaining File Types
+- **49 HTML files**: All blog posts and pages preserved
+- **175 CSS files**: Essential styling for layout and design
+- **106 JavaScript files**: Only layout essentials and TypeKit font loading
+- **694 Image files**: All original photography and graphics
+- **2,544 total files**: Clean, functional static archive
+
 ## Important Notes
 
-- This is a static export from Squarespace, not a typical web development project
+- This is a **cleaned static archive** from Squarespace, optimized for static hosting
 - No modern build tools, frameworks, or package managers are used
 - The site structure reflects Squarespace's export format
-- All dynamic functionality is handled via embedded Squarespace JavaScript
+- **All dynamic functionality has been intentionally removed** for static compatibility
 - Content is primarily focused on succulents, gardening, and DIY crafts
+- Archive preserves the original design and all content from the active blog years (2013-2020)
+
+## Maintenance Guidelines
+
+### What NOT to Add Back
+- Analytics or tracking scripts
+- E-commerce functionality 
+- Social media integration
+- Comments systems
+- Any server-dependent features
+
+### Safe to Modify
+- CSS styling and layout
+- Image content and optimization
+- HTML content within existing structure
+- Static navigation and links
